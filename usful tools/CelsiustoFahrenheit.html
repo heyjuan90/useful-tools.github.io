@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit</title>
+    <style>
+        label {
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.5;
+        }
+        body {
+            background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+        }
+        .centered-text {
+        text-align: center;
+        font-size: 24px;
+        }
+
+        input {
+            border-radius: 15px;
+            border: 2px solid #3c4043;
+            font-size: 18px;
+            line-height: 18px;
+            line-height: 1.5;
+            outline: none;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 5px 20px 5px 10px;
+            background-color: #303134;
+        }
+    </style>
+    <script>
+window.onload = function() {
+    alert("Thanks for visiting my website")
+    let c = document.getElementById("Celsius");
+    let f = document.getElementById("fahr");
+
+    c.oninput = function() {
+        let fahrvalue = (c.value * 9/5) + 32;
+        f.value = fahrvalue;
+    };
+
+    f.oninput = function() {
+        let celsiusvalue = (f.value - 32) * 5/9;
+        c.value = celsiusvalue;
+    };
+}
+
+    </Script>
+</head>
+<body>
+    <form>
+        <label for="Celsius">Celsius</label><br>
+        <input type="number" id="Celsius" value="0">
+        <br><br>
+        <label for="fahr">Fahrenheit</label><br>
+        <input type="number" id="fahr" value="32">
+    </form>     
+</body>
+</html>
